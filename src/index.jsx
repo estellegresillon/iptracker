@@ -1,15 +1,22 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+import { hydrate, render } from 'react-dom';
 import { ThemeProvider } from 'styled-components';
 
 import App from 'components/App';
 import { GlobalStyle } from 'style/globalStyles';
 import { theme } from 'style/theme';
 
-ReactDOM.render(
+const Root = () => (
   <ThemeProvider theme={theme}>
     <GlobalStyle />
     <App />
-  </ThemeProvider>,
-  document.getElementById('root'),
+  </ThemeProvider>
 );
+
+const rootElement = document.getElementById('root');
+
+if (rootElement.hasChildNodes()) {
+  hydrate(<Root />, rootElement);
+} else {
+  render(<Root />, rootElement);
+}
