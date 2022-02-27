@@ -28,9 +28,7 @@ const Map = ({ ip }) => {
       >
         <TileLayer
           attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
-          url={
-            'https://tiles.stadiamaps.com/tiles/alidade_smooth_dark/{z}/{x}/{y}{r}.png'
-          }
+          url={`https://tiles.stadiamaps.com/tiles/alidade_smooth_dark/{z}/{x}/{y}{r}.png?api_key=${process.env.REACT_APP_TILES_API}`}
         />
         <Marker position={coordinates}></Marker>
       </MapContainer>
