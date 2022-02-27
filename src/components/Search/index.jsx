@@ -51,15 +51,14 @@ const Search = ({ ip, setIp }) => {
 export default Search;
 
 const Wrapper = styled.div`
+  background: #212121;
+  background: linear-gradient(0deg, rgba(0, 0, 0, 1) 0%, #212121 100%);
   display: flex;
   flex-direction: column;
   align-items: center;
   height: 35vh;
   padding: 30px;
   position: relative;
-  background-image: url('/pattern-bg.png');
-  background-size: cover;
-  background-repeat: no-repeat;
 
   h1 {
     color: white;
@@ -80,7 +79,7 @@ const TextWrapper = styled.div`
 const InputWrapper = styled.div`
   display: flex;
   align-items: center;
-  height: 55px;
+  height: 45px;
   margin-top: 20px;
 
   input,
@@ -93,7 +92,7 @@ const InputWrapper = styled.div`
   }
 
   input {
-    border-radius: 20px 0px 0px 20px;
+    border-radius: 5px 0px 0px 5px;
     padding: 0 20px;
     color: gray;
     width: 400px;
@@ -105,8 +104,8 @@ const InputWrapper = styled.div`
 
   button {
     padding: 0;
-    background-color: #404082;
-    border-radius: 0px 20px 20px 0px;
+    background-color: #5a5dca;
+    border-radius: 0px 5px 5px 0px;
 
     img {
       margin: 0 20px;
@@ -122,7 +121,7 @@ const LocationWrapper = styled.div`
   background-color: white;
   display: flex;
   position: absolute;
-  top: 300px;
+  top: 250px;
   width: 70%;
   border-radius: 15px;
   box-shadow: ${({ theme }) => theme.shadows.normal};
@@ -132,14 +131,15 @@ const LocationWrapper = styled.div`
   > div {
     width: calc(25% - 70px);
     padding: 0 30px 0 40px;
-    border-left: 1px solid lightgray;
+    border-left: 1px solid #d3d5ff;
     color: #333333;
-    font-size: 20px;
+    font-size: 16px;
     font-weight: bolder;
+    line-height: 18px;
     word-break: break-word;
 
     .title {
-      color: lightgray;
+      color: #d3d5ff;
       font-size: 14px;
       margin-bottom: 20px;
       letter-spacing: 2px;
@@ -153,7 +153,7 @@ const LocationWrapper = styled.div`
       flex-direction: column;
       width: 100%;
       border-left: none;
-      border-top: 1px solid lightgray;
+      border-top: 1px solid #d3d5ff;
       padding: 20px 0;
     }
   }
